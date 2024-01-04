@@ -4,10 +4,10 @@
     	function initEmbeddedMessaging() {
     		try {
     			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-          const currentUrl = window.location.href;
-          console.log('currentUrl = ',currentUrl);
           window.addEventListener("onEmbeddedMessagingReady", () => {            
           	console.log( "Inside Prechat API!!" );
+            const currentUrl = window.location.href;
+            console.log('currentUrl = ',currentUrl);
           	embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "PageURL" : currentUrl } );
           });
     			embeddedservice_bootstrap.init(
