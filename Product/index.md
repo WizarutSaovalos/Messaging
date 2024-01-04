@@ -1,4 +1,27 @@
 <html>
+  <style>
+    /* Basic styling for the chat button */
+    .salesforce-chat-button {
+        background-color: #0070d2; /* Salesforce blue */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
+    /* Hover effect */
+    .salesforce-chat-button:hover {
+        background-color: #005fb8; /* Darker blue */
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    }
+  </style?
   <body>
     <script type='text/javascript'>
     	function initEmbeddedMessaging() {
