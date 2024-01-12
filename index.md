@@ -6,9 +6,11 @@
     			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
           window.addEventListener("onEmbeddedMessagingReady", () => { 
             var elements = document.querySelectorAll('.lightning-button.embedded-messaging-menu-item-option > button.slds-button');
+            console.log("elements",elements);
             elements.forEach(function(element) {
-                element.style.textDecoration = 'none';
-                element.style.setProperty('text-decoration', 'none', 'important');
+              console.log("forEach");
+              element.style.textDecoration = 'none';
+              element.style.setProperty('text-decoration', 'none', 'important');
             });
           	console.log( "Inside Prechat API!!" );
             const currentUrl = window.location.href;
