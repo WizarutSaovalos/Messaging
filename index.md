@@ -4,8 +4,12 @@
     	function initEmbeddedMessaging() {
     		try {
     			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-          window.addEventListener("onEmbeddedMessagingReady", () => {       
-            document.getElementById("p2").style.text-decoration= "none !important";
+          window.addEventListener("onEmbeddedMessagingReady", () => { 
+            var elements = document.querySelectorAll('.lightning-button.embedded-messaging-menu-item-option > button.slds-button');
+            elements.forEach(function(element) {
+                element.style.textDecoration = 'none';
+                element.style.setProperty('text-decoration', 'none', 'important');
+            });
           	console.log( "Inside Prechat API!!" );
             const currentUrl = window.location.href;
             console.log('currentUrl = ',currentUrl);
