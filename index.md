@@ -1,18 +1,11 @@
 <html>
-  <head>
-    <style type="text/css">
-      lightning-button.embedded-messaging-menu-item-option > button.slds-button {
-          min-width: 100%;
-          text-decoration: none !important;
-      }
-    </style>
-  </head>
   <body>
     <script type='text/javascript'>
     	function initEmbeddedMessaging() {
     		try {
     			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-          window.addEventListener("onEmbeddedMessagingReady", () => {            
+          window.addEventListener("onEmbeddedMessagingReady", () => {       
+            document.getElementById("p2").style.text-decoration= "none !important";
           	console.log( "Inside Prechat API!!" );
             const currentUrl = window.location.href;
             console.log('currentUrl = ',currentUrl);
