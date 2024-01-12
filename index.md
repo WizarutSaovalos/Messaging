@@ -1,7 +1,8 @@
 <html>
   <head>
     <style type="text/css">
-      lightning-button.embedded-messaging-menu-item-option > button.slds-button:hover:after {
+      lightning-button.embedded-messaging-menu-item-option > button.slds-button {
+          min-width: 100%;
           text-decoration: none !important;
       }
     </style>
