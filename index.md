@@ -5,11 +5,7 @@
     		try {
     			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
           window.addEventListener("onEmbeddedMessagingReady", () => { 
-            const uniqueId = () => {
-              const dateString = Date.now().toString(36);
-              const randomness = Math.random().toString(36).substr(2);
-              return dateString + randomness;
-            };
+            const uniqueId = "TestSession"
           	console.log( "Inside Prechat API!!" );
             const currentUrl = window.location.href;
             console.log('currentUrl = ',currentUrl);
