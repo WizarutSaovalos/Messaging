@@ -5,17 +5,16 @@
     		try {
     			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
           window.addEventListener("onEmbeddedMessagingReady", () => { 
-            var elements = document.querySelectorAll('.lightning-button.embedded-messaging-menu-item-option > button.slds-button');
-            console.log("elements",elements);
-            elements.forEach(function(element) {
-              console.log("forEach");
-              element.style.textDecoration = 'none';
-              element.style.setProperty('text-decoration', 'none', 'important');
-            });
+            const uniqueId = Math.random().toString(36).substr(2, 9);
+            const uniqueId = () => {
+              const dateString = Date.now().toString(36);
+              const randomness = Math.random().toString(36).substr(2);
+              return dateString + randomness;
+            };
           	console.log( "Inside Prechat API!!" );
             const currentUrl = window.location.href;
             console.log('currentUrl = ',currentUrl);
-          	embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "PageURL" : currentUrl } );
+          	embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "PageURL" : currentUrl, "SessionId" : uniqueId } );
           });
     			embeddedservice_bootstrap.init(
     				'00D0T0000000Nru',
