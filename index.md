@@ -5,8 +5,7 @@
     		try {
     			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
           window.addEventListener("onEmbeddedMessagingReady", () => { 
-            const uniqueId = Math.random().toString(36).substr(2, 9);
-            uniqueId = () => {
+            const uniqueId = () => {
               const dateString = Date.now().toString(36);
               const randomness = Math.random().toString(36).substr(2);
               return dateString + randomness;
