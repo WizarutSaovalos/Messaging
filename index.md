@@ -9,7 +9,7 @@
           	console.log( "Inside Prechat API!!" );
             const currentUrl = window.location.href;
             console.log('currentUrl = ',currentUrl);
-          	//embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "PageURL" : currentUrl, "SessionId" : sesstionId } );
+          	embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "PageURL" : currentUrl/*, "SessionId" : sesstionId*/ } );
           });
     			embeddedservice_bootstrap.init(
     				'00D0T0000000Nru',
